@@ -198,3 +198,15 @@ Return random object
 ```python
 Post.objects.order_by('?')[0]
 ```
+
+<br>
+<hr>
+
+# Complex Lookups with Q objects
+
+```python
+from django.db.models import Q
+starts_o = Q(title__istartswith='o')
+starts_r = Q(title__istartswith='r')
+Post.objects.filter(starts_o | starts_r)
+```
