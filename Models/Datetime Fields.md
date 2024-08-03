@@ -17,4 +17,5 @@ updated = models.DateTimeField(auto_now=True)
 ```
 
 `auto_now_add` -  the date will be saved automatically when creating an object.
+
 `auto_now` -  the date will be updated automatically when saving an object.
