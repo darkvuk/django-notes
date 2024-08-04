@@ -1,0 +1,33 @@
+# Base Template
+
+```python
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{% block title %}{% endblock %}</title>
+    <link href="{% static "css/blog.css" %}" rel="stylesheet">
+</head>
+<body>
+    <div id="content">
+        {% block content %}
+        {% endblock %}
+    </div>
+    <div id="sidebar">
+        <h2>Blog</h2>
+        <p>This is my blog.</p>
+    </div>
+</body>
+</html>
+```
+
+### Load static files
+```python
+{% load static %}
+```
+
+### Load CSS
+CSS file is located in app/static/css/blog.css
+```html
+<link href="{% static "css/blog.css" %}" rel="stylesheet">
+```
