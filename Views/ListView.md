@@ -5,12 +5,9 @@ path('list/', PostListView.as_view(), name='post_list')
 ```
 
 ```python
-from django.http import Http404
-from django.core.paginator import EmptyPage, PageNotAnInteger, Paginator
-from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
+from django.core.paginator import EmptyPage, PageNotAnInteger
+from django.views.generic import ListView
 from .models import Post
-from django.urls import reverse_lazy
-from .forms import PostForm
 
 
 class PostListView(ListView):
