@@ -46,3 +46,11 @@ python manage.py migrate
 ```
 python manage.py loaddata mysite_data.json
 ```
+
+Add to installed files in settings.py
+```python
+INSTALLED_APPS = [
+    # ...
+    'django.contrib.postgres'
+]
+```
