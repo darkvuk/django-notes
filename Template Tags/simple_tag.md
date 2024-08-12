@@ -23,3 +23,33 @@ Load it in a template
 {% load blog_tags %}
 <p>I've written {% total_posts %} posts so far.</p>
 ```
+
+<hr>
+
+### Example: A template tag that returns a QuerySet
+
+```python
+from django.db.models import Count
+
+@register.simple_tag
+def get_most_commented_posts(count=5):
+    return (
+        Post.published
+        .annotate(total_comments=Count('comments'))
+        .order_by('-total_comments')[:count]
+    )
+```
+
+```html
+<h3>Most commented posts</h3>
+{% get_most_commented_posts as most_commented_posts %}
+<ul>
+    {% for post in most_commented_posts %}
+        <li>
+            <a href="{{ post.get_absolute_url }}">
+                {{ post.title }}
+            </a>
+        </li>
+    {% endfor %}
+</ul>
+```
