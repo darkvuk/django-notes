@@ -1,6 +1,4 @@
-# Custom Template Tags
-
-## simple_tag
+# simple_tag
 
 simple_tag is a type of custom template tag in Django that allows you to write a simple Python function and make it available in your templates. This tag is ideal when you want to perform some processing and return a result that can be directly used in the template.
 
