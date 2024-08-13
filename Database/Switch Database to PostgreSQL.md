@@ -18,8 +18,14 @@ pip install psycopg2
 python manage.py dumpdata --indent=2 --output=mysite_data.json --exclude contenttypes
 ```
 
+```
+pip install python-decouple
+```
+
 Next, you need to change the database in settings.py
 ```python
+from decouple import config
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
