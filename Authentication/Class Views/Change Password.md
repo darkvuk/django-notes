@@ -1,6 +1,6 @@
 # Change Password
 
-```
+```python
 from django.contrib.auth.views import (
     LoginView,
     LogoutView,
