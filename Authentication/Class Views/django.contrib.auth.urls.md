@@ -10,3 +10,6 @@ urlpatterns = [
     path('', views.dashboard, name='dashboard'),
 ]
 ```
+
+![image](https://github.com/user-attachments/assets/7f1a45f8-6148-4000-a2d1-1ff444da6c13)
+
