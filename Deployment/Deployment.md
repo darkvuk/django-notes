@@ -226,7 +226,8 @@ server {
         include proxy_params;
         proxy_pass http://unix:/run/gunicorn.sock;
     }
-}```
+}
+```
 <br>
 
 Enable the file by linking it to the sites-enabled directory
@@ -264,3 +265,41 @@ sudo gpasswd -a www-data ubuntu
 nginx -s reload 
 ```
 <br>
+
+Reload services. Do this after each change you make.
+```
+sudo systemctl daemon-reload
+```
+```
+sudo systemctl restart gunicorn
+```
+```
+sudo systemctl restart nginx
+```
+<br>
+
+Install SSL certificate
+```
+sudo apt install snapd
+```
+```
+sudo snap install --classic certbot
+```
+```
+sudo ln -s /snap/bin/certbot /usr/bin/certbot
+```
+```
+sudo certbot --nginx
+```
+```
+dev@weareai.me
+```
+```
+y
+```
+```
+n
+```
+```
+1
+```
