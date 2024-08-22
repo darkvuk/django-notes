@@ -1,4 +1,4 @@
-# Fetch API
+# Update likes using Fetch API
 
 The JavaScript Fetch API is the built-in way to make asynchronous HTTP requests to web servers 
 from web browsers. By using the Fetch API, you can send and retrieve data from the web server 
